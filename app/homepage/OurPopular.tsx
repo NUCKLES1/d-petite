@@ -50,7 +50,7 @@ const OurPopular = () => {
             </motion.button>
           </motion.div>
           <div className="px-4 lg:px-0 lg:pl-20 pt-10">
-            <div className="overflow-hidden overflow-x-auto max-sm:-ml-4 max-sm:w-full max-sm:pb-4">
+            <div className="overflow-hidden overflow-x-auto max-sm:-ml-4 max-sm:w-100 max-sm:pb-4">
               <div className="flex gap-4 max-sm:w-120">
                 {sales.map((item) => (
                   <button

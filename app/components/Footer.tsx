@@ -11,11 +11,11 @@ export function Footer() {
               letterSpacing: "0.2em",
             }}
           >
-            GUIAC
+            D-PETITE AURA
           </h2>
         </div>
         <p className="text-[#d4c9bb]/60" style={{ fontSize: "0.875rem" }}>
-          © 2025 GUIAC. All rights reserved.
+          © 2025 D-PETITE AURA. All rights reserved.
         </p>
       </div>
     </footer>

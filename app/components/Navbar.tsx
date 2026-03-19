@@ -1,12 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { IoIosMenu } from "react-icons/io";
-import { LuSearch } from "react-icons/lu";
-import { BiCart } from "react-icons/bi";
 import { LiaTimesSolid } from "react-icons/lia";
 import Link from "next/link";
-import NavLinks from "../components/Navlinks";
 
 export default function Navbar() {
   const [isStyled, setIsStyled] = useState(false);

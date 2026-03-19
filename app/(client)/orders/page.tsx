@@ -1,5 +1,5 @@
 
-import { requiredUser } from '../../hooks/requiredUser';
+{/*import { requiredUser } from '../../hooks/requiredUser';
 
 const OrdersPage = async () => {
    await requiredUser();
@@ -8,4 +8,13 @@ const OrdersPage = async () => {
   )
 }
 
-export default OrdersPage
+export default OrdersPage*/}
+
+
+const page = () => {
+  return (
+    <div>page</div>
+  )
+}
+
+export default page

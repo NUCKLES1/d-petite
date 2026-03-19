@@ -14,7 +14,7 @@ const OurPopular = () => {
   return (
     <div className="px-4 lg:px-20 h-auto bg-[#fafaf8]">
       <div className="flex flex-col gap-4 w-75 lg:w-120">
-        <h1 className=" lg:text-5xl text-[#231f20]">
+        <h1 className="max-sm:text-4xl text-5xl text-[#231f20]">
           Our Popular Collection
         </h1>
         <p className="text-[#231f20] text-xl">

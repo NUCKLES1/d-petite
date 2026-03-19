@@ -14,7 +14,7 @@ const OurPopular = () => {
   return (
     <div className="px-4 lg:px-20 h-auto bg-[#fafaf8]">
       <div className="flex flex-col gap-4 w-75 lg:w-120">
-        <h1 className="max-sm:text-4xl text-5xl text-[#231f20]">
+        <h1 className="text-5xl text-[#231f20]">
           Our Popular Collection
         </h1>
         <p className="text-[#231f20] text-xl">
@@ -33,11 +33,11 @@ const OurPopular = () => {
           >
             <BackgroundVideo
               src="https://res.cloudinary.com/dbc4muo4t/video/upload/v1773791519/0317_3_sqxh4x.mp4"
-              className=""
               autoPlay
               muted
               playsInline
-              height={600}
+              height={630}
+              className="h-full w-full object-cover"
             />
             <motion.button
               className="bg-[#fafaf8] px-6 py-2 -mt-34 ml-2 absolute rounded-sm"

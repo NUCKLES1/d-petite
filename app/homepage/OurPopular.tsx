@@ -25,7 +25,7 @@ const OurPopular = () => {
       <div>
         <div className="mt-16 lg:mt-30 lg:flex ">
           <motion.div
-            className="h-150 w-full lg:w-90 overflow-hidden rounded-sm"
+            className="h-158 w-full lg:w-90 overflow-hidden rounded-sm"
             initial={{ opacity: 0, marginLeft: -100 }}
             animate={isInView ? { opacity: 1, marginLeft: 0 } : {}}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -50,7 +50,7 @@ const OurPopular = () => {
             </motion.button>
           </motion.div>
           <div className="px-4 lg:px-0 lg:pl-20 pt-10">
-            <div className="overflow-hidden overflow-x-auto max-sm:-ml-4 max-sm:w-95 max-sm:pb-4">
+            <div className="overflow-hidden overflow-x-auto max-sm:-ml-4 max-sm:w-full max-sm:pb-4">
               <div className="flex gap-4 max-sm:w-120">
                 {sales.map((item) => (
                   <button

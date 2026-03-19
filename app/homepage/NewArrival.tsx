@@ -1,4 +1,4 @@
-import React from "react";
+
 import Image from "next/image";
 import pef from "../../public/15.png";
 

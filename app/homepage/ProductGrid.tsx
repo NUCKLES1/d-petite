@@ -1,8 +1,8 @@
 "use client"
 
-import React, { useState } from "react";
+import { useState } from "react";
 import HomeTabber from "./HomeTabber";
-import OurPopular from "./OurPopular";
+
 
 const ProductGrid = () => {
   const [selectedTab, setSelectedTab] = useState("");

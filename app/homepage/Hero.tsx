@@ -1,11 +1,5 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
-import pef from "../../public/hero.png";
-import cloud from "../../public/cloud.png";
-import cloudyy from "../../public/image-rocky.png";
-import { div } from "motion/react-client";
 import { motion } from "motion/react";
 import  BackgroundVideo from "next-video/background-video";
 

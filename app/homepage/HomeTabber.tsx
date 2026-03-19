@@ -1,6 +1,5 @@
 
 
-import React from 'react'
 import { productType } from '../components/Export';
 import { BiRepeat } from 'react-icons/bi';
 

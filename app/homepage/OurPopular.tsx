@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useRef } from "react";
+import { useRef } from "react";
 import BackgroundVideo from "next-video/background-video";
 import { motion, useInView } from "framer-motion";
 import { sales } from "../components/Export";
 import Image from "next/image";
 import pef from "../../public/body.png";
-import ScrollyVideoComponent from "../components/ScrollyVideoComponent";
 
 const OurPopular = () => {
   const ref = useRef(null);

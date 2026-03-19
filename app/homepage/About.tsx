@@ -29,7 +29,7 @@ export function AboutSection() {
                 className="tracking-widest text-[#6b6b6b]"
                 style={{ fontSize: "0.75rem", letterSpacing: "0.2em" }}
               >
-                ABOUT GUIAC
+                ABOUT D-PETITE AURA
               </motion.div>
               <h2
                 className="leading-tight text-[#1a1a1a]"
@@ -42,7 +42,7 @@ export function AboutSection() {
               className="leading-relaxed text-[#6b6b6b]"
               style={{ fontSize: "1.125rem", lineHeight: "1.8" }}
             >
-              GUIAC redefines the art of fragrance — blending natural
+              D-PETITE AURA redefines the art of fragrance — blending natural
               sophistication with timeless allure. Each bottle captures the
               essence of modern elegance, crafted for those who seek beauty in
               simplicity and passion in every detail.

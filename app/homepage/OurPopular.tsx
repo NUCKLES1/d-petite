@@ -13,11 +13,12 @@ const OurPopular = () => {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   return (
     <div className="px-4 lg:px-20 h-auto bg-[#fafaf8]">
-      <div className="flex flex-col gap-4 w-75 lg:w-120">
-        <h1 className="text-5xl text-[#231f20]">
-          Our Popular Collection
-        </h1>
-        <p className="text-[#231f20] text-xl">
+      <div className="flex flex-col gap-4 w-85 lg:w-120">
+        <h1 className="text-5xl text-[#231f20]">Our Popular Collection</h1>
+        <p
+          className="leading-relaxed text-[#6b6b6b]"
+          style={{ fontSize: "1.125rem", lineHeight: "1.8" }}
+        >
           Explore our diverse range of perfumes, each thoughtfully designed to
           cater to your needs and style preferences.
         </p>
@@ -101,6 +102,3 @@ const OurPopular = () => {
 };
 
 export default OurPopular;
-
-
-

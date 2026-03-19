@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import pef from "../../public/15.png";
 
@@ -13,7 +12,12 @@ const NewArrival = () => {
           </div>
           <div className="pb-4 pt-2 text-[#231f20]">
             <h1 className="text-xl lg:text-2xl">Matcha 101</h1>
-            <p>Pefume</p>
+            <p
+              className="tracking-widest text-[#6b6b6b] uppercase"
+              style={{ fontSize: "0.75rem", letterSpacing: "0.2em" }}
+            >
+              Pefume
+            </p>
           </div>
           <h2 className="text-xl lg:text-2xl">$19.99</h2>
         </div>
@@ -23,7 +27,12 @@ const NewArrival = () => {
           </div>
           <div className="pb-4 pt-2 text-[#231f20]">
             <h1 className="text-xl lg:text-2xl">Matcha 101</h1>
-            <p>Pefume</p>
+            <p
+              className="tracking-widest text-[#6b6b6b] uppercase"
+              style={{ fontSize: "0.75rem", letterSpacing: "0.2em" }}
+            >
+              Pefume
+            </p>
           </div>
           <h2 className="text-xl lg:text-2xl">$19.99</h2>
         </div>
@@ -33,7 +42,12 @@ const NewArrival = () => {
           </div>
           <div className="pb-4 pt-2 text-[#231f20]">
             <h1 className="text-xl lg:text-2xl">Matcha 101</h1>
-            <p>Pefume</p>
+            <p
+              className="tracking-widest text-[#6b6b6b] uppercase"
+              style={{ fontSize: "0.75rem", letterSpacing: "0.2em" }}
+            >
+              Pefume
+            </p>
           </div>
           <h2 className="text-xl lg:text-2xl">$19.99</h2>
         </div>
@@ -43,7 +57,12 @@ const NewArrival = () => {
           </div>
           <div className="pb-4 pt-2 text-[#231f20]">
             <h1 className="text-xl lg:text-2xl">Matcha 101</h1>
-            <p>Pefume</p>
+            <p
+              className="tracking-widest text-[#6b6b6b] uppercase"
+              style={{ fontSize: "0.75rem", letterSpacing: "0.2em" }}
+            >
+              Pefume
+            </p>
           </div>
           <h2 className="text-xl lg:text-2xl">$19.99</h2>
         </div>

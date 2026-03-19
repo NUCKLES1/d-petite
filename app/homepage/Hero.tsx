@@ -25,7 +25,7 @@ const Hero = () => {
            <BackgroundVideo src="https://res.cloudinary.com/dbc4muo4t/video/upload/v1773756541/0317_vm4qmj.mp4" className='h-[80dvh] max-lg:h-[80vh] ' autoPlay muted playsInline loop={false} height={620}/>
            </div>
           <div className="h-[80vh] lg:hidden md:hidden">
-           <BackgroundVideo src="https://res.cloudinary.com/dbc4muo4t/video/upload/v1773762872/0317_iwrye6.mp4" className='h-[80dvh]' autoPlay muted playsInline loop={false} height={620}/>
+           <BackgroundVideo src="https://res.cloudinary.com/dbc4muo4t/video/upload/v1773762872/0317_iwrye6.mp4" className='h-[80dvh]'preload="auto" autoPlay muted playsInline loop={false} height={620}/>
            </div>
         </motion.div>
 

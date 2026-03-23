@@ -1,68 +1,116 @@
 "use client";
 
 import { motion } from "motion/react";
-import  BackgroundVideo from "next-video/background-video";
+import Image from "next/image";
+import back from "../../public/back.png";
+import over from "../../public/over.png";
+import { IoArrowUp } from "react-icons/io5";
+import ImageSlider from "../components/slider";
 
 const Hero = () => {
   return (
     <div>
-      <section className="relative h-[80dvh] lg:h-screen w-full overflow-hidden bg-[#fafaf8] rounded-bl-2xl rounded-br-sm">
+      <section className="relative h-[964px]  w-full overflow-hidden bg-[#fafaf8] rounded-bl-2xl rounded-br-2xl">
+        <div className="pt-30 px-4 text-3xl">
+          <h1>The Ultimate Solution for Weight, Hair, and Skin</h1>
+          <div className="flex gap-3 mt-8">
+            <button
+              className="border border-white/40 bg-black rounded-full max-sm:text-white px-10 py-4 tracking-widest cursor-pointer text-white duration-300 backdrop-blur-sm transition-all hover:bg-white hover:text-black"
+              style={{ fontSize: "0.875rem", letterSpacing: "0.15em" }}
+            >
+              Explore Product
+            </button>
+            <button className="px-4 py-2 hover:border-white/40 bg-green-200 rounded-full backdrop-blur-sm duration-300 hover:bg-transparent hover:text-white">
+              <IoArrowUp className="rotate-40 text-2xl" />
+            </button>
+          </div>
+        </div>
         {/* Background Image with Parallax Effect */}
         <motion.div
-          className="absolute inset-0 h-[80vh]"
+          className="absolute overflow-hidden inset-0 lg:h-[964px] h-[50vh] max-sm:px-4 max-sm:mt-75 rounded-xl"
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
-         {/* <div
+          {/* <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundVideo: `https://res.cloudinary.com/dbc4muo4t/video/upload/v1773754984/Untitled_Made_with_FlexClip_1_zpwxoj.mp4`,
             }}
           />
           <div className="absolute inset-0 bg-black/30" />*/}
-          <div className="h-[80vh] max-sm:hidden">
-           <BackgroundVideo src="https://res.cloudinary.com/dbc4muo4t/video/upload/v1773756541/0317_vm4qmj.mp4" className='h-[80dvh] max-lg:h-[80vh] ' autoPlay muted playsInline loop={false} height={620}/>
-           </div>
-          <div className="h-[80vh] lg:hidden md:hidden">
-           <BackgroundVideo src="https://res.cloudinary.com/dbc4muo4t/video/upload/v1773762872/0317_iwrye6.mp4" className='h-[80dvh] 'preload="auto" autoPlay muted playsInline loop={false} height={620}/>
-           </div>
+
+          <div className="h-full rounded-xl lg:hidden md:hidden">
+            <Image
+              src={back}
+              alt=""
+              className="object-cover h-full rounded-xl overflow-hidden w-full"
+            />
+          </div>
+          <Image
+            src={back}
+            alt=""
+            className="object-cover max-sm:hidden h-[964px]  w-full"
+          />
+
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="relative z-20"
+          >
+            <Image
+              src={over}
+              alt=""
+              className="object-contain w-200 mx-auto lg:-mt-[60%] -mt-[105%]"
+            />
+          </motion.div>
         </motion.div>
 
         {/* Content Overlay */}
-        <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center max-sm:pt-60">
+        <div className=" z-10 relative flex h-full flex-col justify-center -mt-50 px-6 max-sm:-mt-45">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="lg:text-left w-full lg:pl-20"
+            className=" w-full lg:px-10 relative z-10"
           >
             <h1
-              className="mb-6 text-green-400 tracking-wider lg:text-[#231f20] max-sm:font-bolder"
+              className="mb-6 lg:text-center tracking-tight text-white max-sm:font-bolder  relative z-10"
               style={{
-                fontSize: "clamp(2rem, 6vw, 4rem)",
-                fontWeight: 350,
-                letterSpacing: "0.15em",
+                fontWeight: 550,
+                letterSpacing: "0.01em",
+
+                textAlign: "center",
+                width: "100%", // take full width
+                fontSize: "13vw", // responsive font size based on viewport width
+                margin: 0,
+                lineHeight: 1.2,
               }}
             >
-              D-PETITE AURA <br /> COLLECTION
+              SKIN ESSENCE
             </h1>
             <p
-              className="mb-8 w-full text-left mx-auto tracking-wide text-[#231f20]"
+              className="mb-8 max-sm:pl-2 mt-20 w-60 text-left tracking-wide text-white"
               style={{
-                fontSize: "clamp(1rem, 2vw, 1.5rem)",
+                fontSize: "clamp(0.9rem, 1vw, 1rem)",
                 fontWeight: 400,
                 letterSpacing: "0.1em",
               }}
             >
-              Essence of Elegance
+              Elevated skincare inspired by nature and perfected modern
+              formulation for everyday confidence.
             </p>
-            <button
-              className="border border-white/40 bg-white/10 max-sm:text-black px-10 py-6 tracking-widest text-white backdrop-blur-sm transition-all hover:bg-white hover:text-black"
-              style={{ fontSize: "0.875rem", letterSpacing: "0.15em" }}
-            >
-              DISCOVER THE SCENT
-            </button>
+            <div className="flex gap-3 max-sm:hidden">
+              <button
+                className="border border-white/40 bg-white/10 rounded-full max-sm:text-white px-10 py-4 tracking-widest cursor-pointer text-white duration-300 backdrop-blur-sm transition-all hover:bg-white hover:text-black"
+                style={{ fontSize: "0.875rem", letterSpacing: "0.15em" }}
+              >
+                Explore Product
+              </button>
+              <button className="px-4 py-2 hover:border-white/40 bg-white rounded-full backdrop-blur-sm duration-300 hover:bg-transparent hover:text-white">
+                <IoArrowUp className="rotate-40 text-2xl" />
+              </button>
+            </div>
           </motion.div>
         </div>
 
@@ -85,6 +133,7 @@ const Hero = () => {
             />
           </motion.div>
         </motion.div>
+        <ImageSlider />
       </section>
     </div>
   );

@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { IoIosMenu } from "react-icons/io";
+import Image from "next/image";
 import { LiaTimesSolid } from "react-icons/lia";
 import Link from "next/link";
+import logo from "../../public/logo.png";
 
 export default function Navbar() {
   const [isStyled, setIsStyled] = useState(false);
@@ -41,21 +43,24 @@ export default function Navbar() {
 
   return (
     <div>
-      <div className="w-full background py-6 px-10 max-sm:px-4 fixed z-100 overflow-hidden">
+      <div className="w-full background py-6 px-4 lg:px-14 max-sm:px-4 fixed z-100 overflow-hidden">
         <div className="flex justify-between">
           <Link href="/" className="cursor-pointer">
             <div className="lg:mt-2 flex">
-              <h1
-                className="tracking-widest text-white transition-opacity hover:opacity-70"
-                style={{ fontSize: "1.25rem", letterSpacing: "0.2em" }}
-              >
-                PETITE
-              </h1>
+             <ul className="flex gap-8 max-sm:hidden text-white">
+              <li>Home</li>
+              <li>About</li>
+              <li>Products</li>
+              <li>Delivery</li>
+             </ul>
             </div>
           </Link>
 
+          <div className="text-white max-sm:ml-0 max-sm:absolute lg:-ml-50">
+            <Image src={logo} alt="logo" className="w-12 h-10 "/>
+          </div>
           <div
-            className="text-bold text-xl gap-1 flex cursor-pointer"
+            className="text-bold bg-black p-2 rounded-full text-xl gap-1 flex cursor-pointer"
             onClick={toggleStyle}
           >
             <IoIosMenu size={30} className="hidden max-sm:block text-white" />

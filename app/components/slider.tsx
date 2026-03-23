@@ -64,7 +64,7 @@ export default function ImageSlider() {
   return (
     <div className="lg:px-26 px-4 w-full -mt-[24%] max-sm:-mt-70 z-30 relative">
       <div className="w-76 max-sm:w-full lg:right-20 lg:absolute">
-        <div className="lg:w-full max-sm:h-20 w-50 max-sm:absolute max-sm:-mt-26 max-sm:pt-10 flex justify-between max-sm:bg-white rounded-tr-4xl">
+        <div className="lg:w-full max-sm:h-20 w-50 max-sm:absolute max-sm:-mt-[25%] max-sm:pt-10 flex justify-between max-sm:bg-white rounded-tr-4xl">
           <div className="flex justify-between max-sm:bg-green-300 max-sm:pt-8  max-sm:h-16 max-sm:px-4 rounded-4xl w-44 lg:w-full max-sm:mx-auto max-sm:-mt-7">
             <div>
               <button

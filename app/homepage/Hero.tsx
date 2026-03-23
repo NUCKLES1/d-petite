@@ -75,7 +75,7 @@ const Hero = () => {
             className=" w-full lg:px-10 relative z-10"
           >
             <h1
-              className="mb-6 lg:text-center tracking-tight text-white max-sm:font-bolder  relative z-10"
+              className="mb-6 lg:text-center tracking-tight text-white relative z-10"
               style={{
                 fontWeight: 550,
                 letterSpacing: "0.01em",

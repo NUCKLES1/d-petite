@@ -65,16 +65,16 @@ export default function ImageSlider() {
     <div className="lg:px-26 px-4 w-full -mt-[28%] max-sm:-mt-80 z-30 lg:relative max-sm:h-150">
       <div className="w-76 max-sm:w-full lg:right-20 lg:absolute">
         <div className="lg:w-full max-sm:h-20 w-50 max-sm:absolute max-sm:mt-30 max-sm:pt-10 flex justify-between max-sm:bg-[#fafaf8] rounded-tr-4xl relative z-30">
-          <div className="flex justify-between max-sm:bg-green-300 max-sm:pt-8  max-sm:h-16 max-sm:px-4 rounded-4xl w-44 lg:w-full max-sm:mx-auto max-sm:-mt-7">
+          <div className="flex justify-between max-sm:bg-black/90 max-sm:pt-8  max-sm:h-16 max-sm:px-4 rounded-4xl w-44 lg:w-full max-sm:mx-auto max-sm:-mt-7">
             <div>
               <button
                 onClick={prevSlide}
-                className=" bg-white/60 -translate-y-1/2 duration-300 cursor-pointer hover:bg-white hover:text-black px-1 py-1 rounded-full"
+                className=" bg-white/60 max-sm:bg-white -translate-y-1/2 duration-300 cursor-pointer hover:bg-white hover:text-black px-1 py-1 rounded-full"
               >
                 <MdKeyboardArrowLeft />
               </button>
             </div>
-            <div className="w-14 border-t-2 border-white/50 max-sm:hidden"></div>
+            <div className="w-14 border-t-2 border-white/50 max-sm:hidden "></div>
             <div className="flex space-x-2">
               {items.map((_, index) => (
                 <button
@@ -90,7 +90,7 @@ export default function ImageSlider() {
             <div>
               <button
                 onClick={nextSlide}
-                className=" bg-white/60 -translate-y-1/2 duration-300 hover:bg-white cursor-pointer hover:text-black px-1 py-1 rounded-full"
+                className=" bg-white/60 -translate-y-1/2 duration-300 hover:bg-white max-sm:bg-white cursor-pointer hover:text-black px-1 py-1 rounded-full"
               >
                 <MdKeyboardArrowRight />
               </button>

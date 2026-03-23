@@ -10,7 +10,7 @@ import ImageSlider from "../components/slider";
 const Hero = () => {
   return (
     <div>
-      <section className="relative h-[964px]  w-full overflow-hidden bg-[#fafaf8] rounded-bl-2xl rounded-br-2xl">
+      <section className="relative h-[964px]  w-full lg:overflow-hidden bg-[#fafaf8] rounded-bl-2xl rounded-br-2xl">
         <div className="pt-30 px-4 text-3xl">
           <h1>The Ultimate Solution for Weight, Hair, and Skin</h1>
           <div className="flex gap-3 mt-8">
@@ -75,11 +75,9 @@ const Hero = () => {
             className=" w-full lg:px-10 relative z-10"
           >
             <h1
-              className="mb-6 lg:text-center tracking-tight text-white relative z-10"
+              className="mb-6 lg:text-center tracking-tight lg:font-medium text-white relative z-10"
               style={{
-                fontWeight: 550,
                 letterSpacing: "0.01em",
-
                 textAlign: "center",
                 width: "100%", // take full width
                 fontSize: "13vw", // responsive font size based on viewport width

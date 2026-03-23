@@ -86,6 +86,7 @@ const YourDaily = () => {
             </h1>
           </div>
         </div>
+        <p className=" text-[#29272786]">Result may vary. Consistent use helps improve skin texture, hydration and tone</p>
       </div>
     </div>
   );

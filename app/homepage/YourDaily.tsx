@@ -38,7 +38,7 @@ const YourDaily = () => {
             <h1 className="pt-4 text-[#292727e0] text-2xl ">
               Undereye <br /> Corrector
             </h1>
-            <p className="w-60 pt-2 text-[#29272786]">
+            <p className="w-70 lg:w-60 pt-2 text-[#29272786]">
               Brightens darks circlesand smooths fine lines for a fresh look
             </p>
             <button className="mt-4 px-6 py-3 rounded-full bg-black text-white hover:text-black hover:bg-white cursor-pointer duration-300">
@@ -73,13 +73,13 @@ const YourDaily = () => {
                 className="w-full relative lg:mt-5"
               />
             </div>
-            <div className="w-30 h-30 -mt-90 p-4 object-cover rounded-lg relative z-10">
-              <div className="flex px-4 py-1 bg-white w-38 rounded-full pt-2">
+            <div className="w-90 h-30 -mt-90 p-4 object-cover rounded-lg relative z-10">
+              <button className="flex pl-4 pr-2 py-1 bg-white rounded-full pt-2">
                 Skin Health{" "}
                 <div className="w-8 h-8 bg-blue-100 rounded-full ml-2 -mt-1">
                   <PiFlowerLotusThin className="mx-auto text-xl mt-1.5" />
                 </div>
-              </div>
+              </button>
             </div>
             <h1 className="pt-34 lg:pt-30 pl-4 text-white text-3xl relative z-10">
               Confidence starts with skincare

@@ -59,7 +59,7 @@ export default function Navbar() {
 
           <div className="text-white max-sm:ml-0 max-sm:absolute lg:-ml-50">
             <Image src={logo} alt="logo" className="w-12 h-10 max-sm:hidden"/>
-            <Image src={logo2} alt="logo" className="w-12 h-10 "/>
+            <Image src={logo2} alt="logo" className="w-12 h-10 lg:hidden"/>
           </div>
           <div
             className="text-bold bg-black p-2 rounded-full text-xl gap-1 flex cursor-pointer"

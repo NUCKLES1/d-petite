@@ -69,7 +69,7 @@ const Hero = () => {
             <Image
               src={over}
               alt=""
-              className="object-contain w-200 mx-auto lg:-mt-[60%] -mt-[105%]"
+              className="object-contain w-200 mx-auto lg:-mt-[50%] -mt-[105%]"
             />
           </motion.div>
         </motion.div>

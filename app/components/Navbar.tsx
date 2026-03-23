@@ -6,6 +6,7 @@ import Image from "next/image";
 import { LiaTimesSolid } from "react-icons/lia";
 import Link from "next/link";
 import logo from "../../public/logo.png";
+import logo2 from "../../public/logo2.png";
 
 export default function Navbar() {
   const [isStyled, setIsStyled] = useState(false);
@@ -57,7 +58,8 @@ export default function Navbar() {
           </Link>
 
           <div className="text-white max-sm:ml-0 max-sm:absolute lg:-ml-50">
-            <Image src={logo} alt="logo" className="w-12 h-10 "/>
+            <Image src={logo} alt="logo" className="w-12 h-10 max-sm:hidden"/>
+            <Image src={logo2} alt="logo" className="w-12 h-10 "/>
           </div>
           <div
             className="text-bold bg-black p-2 rounded-full text-xl gap-1 flex cursor-pointer"

@@ -12,18 +12,26 @@ const Hero = () => {
     <div>
       <section className="relative h-[964px]  w-full lg:overflow-hidden bg-[#fafaf8] rounded-bl-2xl rounded-br-2xl">
         <div className="pt-30 px-4 text-3xl">
-          <h1>The Ultimate Solution for Weight, Hair, and Skin</h1>
-          <div className="flex gap-3 mt-8">
-            <button
-              className="border border-white/40 bg-black rounded-full max-sm:text-white px-10 py-4 tracking-widest cursor-pointer text-white duration-300 backdrop-blur-sm transition-all hover:bg-white hover:text-black"
-              style={{ fontSize: "0.875rem", letterSpacing: "0.15em" }}
-            >
-              Explore Product
-            </button>
-            <button className="px-4 py-2 hover:border-white/40 bg-green-200 rounded-full backdrop-blur-sm duration-300 hover:bg-transparent hover:text-white">
-              <IoArrowUp className="rotate-40 text-2xl" />
-            </button>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className=" w-full lg:px-10 relative z-10"
+          >
+            <h1>The Ultimate Solution for Weight, Hair, and Skin</h1>
+
+            <div className="flex gap-3 mt-8">
+              <button
+                className="border border-white/40 bg-black rounded-full max-sm:text-white px-10 py-4 tracking-widest cursor-pointer text-white duration-300 backdrop-blur-sm transition-all hover:bg-white hover:text-black"
+                style={{ fontSize: "0.875rem", letterSpacing: "0.15em" }}
+              >
+                Explore Product
+              </button>
+              <button className="px-4 py-2 hover:border-white/40 bg-green-200 rounded-full backdrop-blur-sm duration-300 hover:bg-transparent hover:text-white">
+                <IoArrowUp className="rotate-40 text-2xl" />
+              </button>
+            </div>
+          </motion.div>
         </div>
         {/* Background Image with Parallax Effect */}
         <motion.div

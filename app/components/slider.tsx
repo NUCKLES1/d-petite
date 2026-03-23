@@ -62,7 +62,7 @@ export default function ImageSlider() {
   const { name, price, image } = items[currentIndex];
 
   return (
-    <div className="lg:px-26 px-4 w-full -mt-[24%] max-sm:-mt-70 z-30 lg:relative max-sm:h-150">
+    <div className="lg:px-26 px-4 w-full -mt-[34%] max-sm:-mt-70 z-30 lg:relative max-sm:h-150">
       <div className="w-76 max-sm:w-full lg:right-20 lg:absolute">
         <div className="lg:w-full max-sm:h-20 w-50 max-sm:absolute max-sm:mt-30 max-sm:pt-10 flex justify-between max-sm:bg-[#fafaf8] rounded-tr-4xl relative z-30">
           <div className="flex justify-between max-sm:bg-green-300 max-sm:pt-8  max-sm:h-16 max-sm:px-4 rounded-4xl w-44 lg:w-full max-sm:mx-auto max-sm:-mt-7">

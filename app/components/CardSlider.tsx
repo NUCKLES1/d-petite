@@ -2,6 +2,9 @@
 
 import { useRef, useEffect } from "react";
 
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowLeft } from "react-icons/md";
+
 const slides = [
   { title: "Hair Growth", image: "/cream2.png" },
   { title: "Neck Firming", image: "/cream.png" },
@@ -16,9 +19,9 @@ const slides = [
 ];
 
 export default function CardSlider() {
-  const scrollRef = useRef(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
 
-  const scroll = (direction) => {
+  const scroll = (direction: "next" | "prev") => {
     const container = scrollRef.current;
     if (!container) return;
 
@@ -36,57 +39,57 @@ export default function CardSlider() {
     });
   };
 
-useEffect(() => {
-  const container = scrollRef.current;
-  if (!container) return;
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
 
-  const interval = setInterval(() => {
-    const card = container.querySelector("div");
-    if (!card) return;
+    const interval = setInterval(() => {
+      const card = container.querySelector("div");
+      if (!card) return;
 
-    const cardWidth = card.offsetWidth + 16; // width + gap
+      const cardWidth = card.offsetWidth + 16; // width + gap
 
-    // If near the end → reset to start
-    if (
-      container.scrollLeft + container.clientWidth >=
-      container.scrollWidth - cardWidth
-    ) {
-      container.scrollTo({
-        left: 0,
-        behavior: "auto", // instant reset (no animation)
-      });
-    } else {
-      container.scrollBy({
-        left: cardWidth,
-        behavior: "smooth",
-      });
-    }
-  }, 4000);
+      // If near the end → reset to start
+      if (
+        container.scrollLeft + container.clientWidth >=
+        container.scrollWidth - cardWidth
+      ) {
+        container.scrollTo({
+          left: 0,
+          behavior: "auto", // instant reset (no animation)
+        });
+      } else {
+        container.scrollBy({
+          left: cardWidth,
+          behavior: "smooth",
+        });
+      }
+    }, 4000);
 
-  return () => clearInterval(interval);
-}, []);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="relative  mx-auto rounded-3xl max-sm:hidden">
-
+    <div className="relative mt-20 mx-auto rounded-3xl max-sm:hidden">
       {/* Header */}
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex w-full justify-end items-center mb-6">
+        <div>
+          {/* Buttons */}
+          <div className="flex px-20 relative -mt-32 z-10 gap-3">
+            <button
+              onClick={() => scroll("prev")}
+              className="bg-purple-100 hover:bg-purple-50 shadow-md rounded-full w-10 h-10 flex items-center justify-center duration-300 cursor-pointer"
+            >
+             <MdKeyboardArrowLeft size={20}/>
+            </button>
 
-        {/* Buttons */}
-        <div className="flex px-20 gap-3">
-          <button
-            onClick={() => scroll("prev")}
-            className="bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center"
-          >
-            ←
-          </button>
-
-          <button
-            onClick={() => scroll("next")}
-            className="bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center"
-          >
-            →
-          </button>
+            <button
+              onClick={() => scroll("next")}
+              className="bg-purple-100 hover:bg-purple-50 shadow-md rounded-full w-10 h-10 flex items-center justify-center duration-300 cursor-pointer"
+            >
+            <MdKeyboardArrowRight size={20} />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -98,7 +101,7 @@ useEffect(() => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="w-80 h-80 bg-white rounded-2xl overflow-hidden shadow-sm flex-shrink-0 card"
+            className="w-80 h-90 bg-white rounded-2xl overflow-hidden shadow-sm flex-shrink-0 card"
           >
             <div className="relative h-full">
               <img

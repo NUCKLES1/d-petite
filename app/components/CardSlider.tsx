@@ -107,7 +107,7 @@ export default function CardSlider() {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-110 duration-300 ease-in-out"
               />
 
               <div className="absolute bottom-3 left-3 bg-white/80 backdrop-blur px-3 py-1 rounded-full text-sm">

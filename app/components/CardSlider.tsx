@@ -18,7 +18,7 @@ const slides = [
 export default function CardSlider() {
   const scrollRef = useRef(null);
 
-  const scroll = (dir) => {
+  const scroll = (direction) => {
     const container = scrollRef.current;
     if (!container) return;
 
@@ -31,7 +31,7 @@ export default function CardSlider() {
     const scrollAmount = cardWidth + gap;
 
     container.scrollBy({
-      left: dir === "next" ? scrollAmount : -scrollAmount,
+      left: direction === "next" ? scrollAmount : -scrollAmount,
       behavior: "smooth",
     });
   };
@@ -67,21 +67,13 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className="relative max-w-6xl mx-auto p-6 bg-[#f8f8f8] rounded-3xl">
+    <div className="relative  mx-auto rounded-3xl max-sm:hidden">
 
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
-        <div>
-          <p className="text-gray-400 text-sm">
-            Glowskin is your partner
-          </p>
-          <h2 className="text-2xl font-semibold">
-            in glow, strength, and confidence
-          </h2>
-        </div>
 
         {/* Buttons */}
-        <div className="flex gap-3">
+        <div className="flex px-20 gap-3">
           <button
             onClick={() => scroll("prev")}
             className="bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center"
@@ -101,12 +93,12 @@ useEffect(() => {
       {/* Slider */}
       <div
         ref={scrollRef}
-        className="flex gap-4 overflow-x-auto scrollbar-hide scroll-snap-x"
+        className="flex gap-4 overflow-x-auto scrollbar-hide scroll-snap-x -ml-50"
       >
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="w-80 h-90 bg-white rounded-2xl overflow-hidden shadow-sm flex-shrink-0 snap-start"
+            className="w-80 h-80 bg-white rounded-2xl overflow-hidden shadow-sm flex-shrink-0 card"
           >
             <div className="relative h-full">
               <img

@@ -6,6 +6,7 @@ import { motion, useInView } from "framer-motion";
 import { sales } from "../components/Export";
 import Image from "next/image";
 import pef from "../../public/body.png";
+import GlowSlider from "../components/SliderSec";
 
 const OurPopular = () => {
   const ref = useRef(null);
@@ -97,6 +98,7 @@ const OurPopular = () => {
           <div className="inset-0 bg-black/30" />
         </div>
       </div>
+      
     </div>
   );
 };

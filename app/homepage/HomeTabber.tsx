@@ -14,8 +14,8 @@ const HomeTabber = ({ selectedTab, onTabSelect }: Props) => {
         <div className='flex items-center gap-1.5'>
             {productType.map((item)=>(
                 <button key={item?.title} 
-                onClick={()=> onTabSelect(item.title)}
-                className={`border border-black px-4 py-1.5 md:px-6 md:py-2 rounded-full hover:bg-black hover:text-white`}>
+                onClick={()=> onTabSelect(item.value)}
+                className={`border border-black px-4 py-1.5 md:px-6 md:py-2 rounded-full hover:bg-black hover:text-white ${selectedTab === item?.value && 'bg-black text-white'}`}>
                     {item?.title}
                 </button>
             )

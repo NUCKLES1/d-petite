@@ -22,7 +22,7 @@ const Hero = () => {
           
           <div className="flex gap-3 mt-8">
             <button
-              className="border border-white/40 bg-black/90 rounded-full max-sm:text-white px-10 py-5 tracking-widest cursor-pointer text-white duration-300 backdrop-blur-sm transition-all hover:bg-white hover:text-black"
+              className="bg-black/90 rounded-full max-sm:text-white px-10 py-5 tracking-widest cursor-pointer text-white duration-300 backdrop-blur-sm transition-all hover:bg-white hover:text-black"
               style={{ fontSize: "0.875rem", letterSpacing: "0.15em" }}
             >
               Explore Product

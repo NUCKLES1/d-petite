@@ -26,7 +26,7 @@ const YourDaily = () => {
         </div>
       </div>
       <p className="pt-10 text-2xl text-[#292727e0]">Featured Products</p>
-      <div className="grid  lg:grid-cols-3 mt-6 w-full gap-6">
+      <div className="grid lg:grid-cols-3 mt-6 w-full gap-6">
         <div className="group relative h-90 hover:shadow-lg rounded-lg  hover:scale-110 duration-300 overflow-hidden">
           <Image src={pink} alt="" className="w-full h-100" />
           <div className="w-full p-4 h-full -mt-99">
@@ -66,7 +66,7 @@ const YourDaily = () => {
         </div>
         <div className="group relative h-90 hover:shadow-lg rounded-lg  hover:scale-110 duration-300 overflow-hidden bg-blue-200">
           <div className="w-full h-full ">
-            <div className="w-full h-full">
+            <div className="w-full h-full relative mb-0">
               <Image
                 src={cream4}
                 alt=""

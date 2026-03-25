@@ -8,6 +8,8 @@ import Navbar from "../components/Navbar";
 import NewArrival from "./NewArrival";
 import OurPopular from "./OurPopular";
 import YourDaily from "./YourDaily";
+import GlowSlider from "../components/SliderSec";
+import Petite from "./Petite";
 
 const Homepage = async () => {
   return (
@@ -15,8 +17,10 @@ const Homepage = async () => {
       <Navbar />
       <Hero />
       <YourDaily />
+      <Petite />
       <NewArrival />
       <OurPopular />
+      
       <ProductGrid />
       <AboutSection />
       <PhilosophySection />

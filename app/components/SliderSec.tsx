@@ -109,7 +109,7 @@ export default function PremiumSlider() {
       </div>
 
       {/* Controls */}
-      <div className="absolute w-full inset-0 flex items-center mx-auto px-4 mt-86 pointer-events-none">
+      <div className="absolute w-full inset-0 flex items-center mx-auto px-4 mt-90 pointer-events-none">
         {/* Prev Button */}
         <div className="mx-auto gap-5 flex">
         <button

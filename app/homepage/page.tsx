@@ -10,6 +10,7 @@ import OurPopular from "./OurPopular";
 import YourDaily from "./YourDaily";
 import GlowSlider from "../components/SliderSec";
 import Petite from "./Petite";
+import Inspiring from "./Inspiring";
 
 const Homepage = async () => {
   return (
@@ -18,6 +19,7 @@ const Homepage = async () => {
       <Hero />
       <YourDaily />
       <Petite />
+      <Inspiring />
       <NewArrival />
       <OurPopular />
       

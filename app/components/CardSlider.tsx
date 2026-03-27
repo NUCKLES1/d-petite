@@ -39,69 +39,70 @@ export default function CardSlider() {
     });
   };
 
-  useEffect(() => {
-    const container = scrollRef.current;
-    if (!container) return;
+useEffect(() => {
+  const container = scrollRef.current;
+  if (!container) return;
 
-    const interval = setInterval(() => {
-      const card = container.querySelector("div");
-      if (!card) return;
+  const interval = setInterval(() => {
+    const card = container.querySelector("div");
+    if (!card) return;
 
-      const cardWidth = card.offsetWidth + 16; // width + gap
+    const cardWidth = card.offsetWidth + 16; // width + gap
 
-      // If near the end → reset to start
-      if (
-        container.scrollLeft + container.clientWidth >=
-        container.scrollWidth - cardWidth
-      ) {
-        container.scrollTo({
-          left: 0,
-          behavior: "auto", // instant reset (no animation)
-        });
-      } else {
-        container.scrollBy({
-          left: cardWidth,
-          behavior: "smooth",
-        });
-      }
-    }, 4000);
+    // If near the end → reset to start
+    if (
+      container.scrollLeft + container.clientWidth >=
+      container.scrollWidth - cardWidth
+    ) {
+      container.scrollTo({
+        left: 0,
+        behavior: "auto", // instant reset (no animation)
+      });
+    } else {
+      container.scrollBy({
+        left: cardWidth,
+        behavior: "smooth",
+      });
+    }
+  }, 4000);
 
-    return () => clearInterval(interval);
-  }, []);
+  return () => clearInterval(interval);
+}, []);
 
   return (
-    <div className="relative mt-20 mx-auto rounded-3xl max-sm:hidden">
-      {/* Header */}
-      <div className="flex w-full justify-end items-center mb-6">
-        <div>
-          {/* Buttons */}
-          <div className="flex px-20 relative -mt-32 z-10 gap-3">
-            <button
-              onClick={() => scroll("prev")}
-              className="bg-purple-100 hover:bg-purple-50 shadow-md rounded-full w-10 h-10 flex items-center justify-center duration-300 cursor-pointer"
-            >
-             <MdKeyboardArrowLeft size={20}/>
-            </button>
+   <div className="relative max-w-7xl max-sm:hidden rounded-3xl">
 
-            <button
-              onClick={() => scroll("next")}
-              className="bg-purple-100 hover:bg-purple-50 shadow-md rounded-full w-10 h-10 flex items-center justify-center duration-300 cursor-pointer"
-            >
-            <MdKeyboardArrowRight size={20} />
-            </button>
-          </div>
+      {/* Header */}
+      <div className="flex px-30 mt-10 justify-end items-center mb-6">
+      
+
+        {/* Buttons */}
+        <div className="flex gap-3">
+          <button
+            onClick={() => scroll("prev")}
+            className="bg-purple-50 duration-300 cursor-pointer hover:bg-purple-100 shadow-md rounded-full w-10 h-10 flex items-center justify-center"
+          >
+          <MdKeyboardArrowLeft />
+          </button>
+
+          <button
+            onClick={() => scroll("next")}
+            className="bg-purple-50 duration-300 cursor-pointer hover:bg-purple-100 shadow-md rounded-full w-10 h-10 flex items-center justify-center"
+          >
+           <MdKeyboardArrowRight />
+          </button>
         </div>
       </div>
 
       {/* Slider */}
       <div
         ref={scrollRef}
-        className="flex gap-4 overflow-x-auto scrollbar-hide scroll-snap-x -ml-50"
+        className="flex gap-4 overflow-x-auto scrollbar-hide mt-10"
       >
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="w-80 h-90 bg-white rounded-2xl overflow-hidden shadow-sm flex-shrink-0 card"
+            className="w-80 h-100 bg-white rounded-2xl overflow-hidden shadow-sm flex-shrink-0"
           >
             <div className="relative h-full">
               <img
